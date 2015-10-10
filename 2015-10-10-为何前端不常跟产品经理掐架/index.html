@@ -26,6 +26,8 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
+    <meta name="description" content="这里就存放印象笔记中收藏的文章，重新阅读、形成知识闭环。" />
+
 
 
   <meta name="keywords" content="产品经理,设计," />
@@ -43,7 +45,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="为何前端不常跟产品经理掐架">
 <meta property="og:url" content="http://hexo.jimmylv.info/2015-10-10-为何前端不常跟产品经理掐架/index.html">
-<meta property="og:site_name" content="吕立青的博客">
+<meta property="og:site_name" content="吕立青的商业博客">
 <meta property="og:description" content="为何前端不常跟产品经理掐架[核心提示] 既不是美工，也不写JAVA，我们是前端工程师，看看我们究竟想和谁打架？
 前言：无论众人之前怎么称呼我们。前端工程师？重构工程师？JS 交互工程师？UED？切图仔(妹)？美工等等，都没关系，下文统称为：前端。至于“产品经理”，PM 这个缩写就简明多了。如果你是这里提到的前端，那么无论你是否戴表，你已经被代表了，还望见谅。
 前端和 PM 的关系早在上古时期，UI">
@@ -66,7 +68,7 @@
   };
 </script>
 
-  <title> 为何前端不常跟产品经理掐架 | 吕立青的博客 </title>
+  <title> 为何前端不常跟产品经理掐架 | 吕立青的商业博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -94,7 +96,7 @@
       <span class="logo">
         <i class="icon-next-logo"></i>
       </span>
-      <span class="site-title">吕立青的博客</span>
+      <span class="site-title">吕立青的商业博客</span>
   </a>
   <span class="logo-line-after"><i></i></span>
 </h1>
@@ -111,13 +113,21 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
           </a>
         </li>
       
@@ -137,12 +147,54 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            <i class="menu-item-icon icon-next-commonweal"></i> <br />
+            公益404
+          </a>
+        </li>
+      
 
       
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form" >
+  <input type="text" id="ts-search-input" class="menu-search-input">
+</form>
+<script>
+  var option = {
+    engineKey: '81998ebb1fe880cdf565'
+  };
+  (function(w,d,t,u,n,s,e){
+    s = d.createElement(t);
+    s.src = u;
+    s.async = 1;
+    w[n] = function(r){
+      w[n].opts = r;
+    };
+    e = d.getElementsByTagName(t)[0];
+    e.parentNode.insertBefore(s, e);
+  })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+  _ts(option);
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -297,6 +349,29 @@
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -337,10 +412,10 @@
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="JimmyLv" itemprop="image"/>
+          <img class="site-author-image" src="/images/avatar.jpg" alt="JimmyLv" itemprop="image"/>
           <p class="site-author-name" itemprop="name">JimmyLv</p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
+        <p class="site-description motion-element" itemprop="description">这里就存放印象笔记中收藏的文章，重新阅读、形成知识闭环。</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -350,10 +425,10 @@
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">0</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
@@ -369,12 +444,33 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/liqing215" target="_blank">weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/JimmyLv" target="_blank">github</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/lu-li-qing-90" target="_blank">zhihu</a>
+              </span>
+            
+          
         </div>
 
         
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友链</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://blog.jimmylv.info" target="_blank">JimmyLv</a>
+              </span>
+            
           
         </div>
 
@@ -402,7 +498,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner"> <div class="copyright" >
   
-  &copy; &nbsp; 
+  &copy; &nbsp;  2014 - 
   <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
