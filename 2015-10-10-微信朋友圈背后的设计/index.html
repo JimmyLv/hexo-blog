@@ -1,0 +1,622 @@
+<!doctype html>
+<html class="theme-next use-motion ">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+
+
+  <meta name="keywords" content="tengxun,产品,设计," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="微信朋友圈背后的设计[核心提示] 继摇一摇，身边的人之后，朋友圈是微信中非常重要的一个社交功能，它对于微信这个产品的意义如何呢？
+2011 年初，腾讯正式发布语音社交应用微信，随后通过快速迭代迅速占领市场，而在不久前结束的 2012 中国互联网大会上，马化腾在演讲中提到，微信用了 14 个月注册用户就超过了1亿。而从 2011 年 1 月微信发布到 2012 年9月突破2亿，也只不过用了 20 个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信朋友圈背后的设计">
+<meta property="og:url" content="http://hexo.jimmylv.info/2015-10-10-微信朋友圈背后的设计/index.html">
+<meta property="og:site_name" content="吕立青的博客">
+<meta property="og:description" content="微信朋友圈背后的设计[核心提示] 继摇一摇，身边的人之后，朋友圈是微信中非常重要的一个社交功能，它对于微信这个产品的意义如何呢？
+2011 年初，腾讯正式发布语音社交应用微信，随后通过快速迭代迅速占领市场，而在不久前结束的 2012 中国互联网大会上，马化腾在演讲中提到，微信用了 14 个月注册用户就超过了1亿。而从 2011 年 1 月微信发布到 2012 年9月突破2亿，也只不过用了 20 个">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/da0276e6d3268bd2e159b5be0c835a41.jpeg">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/50b0e99bd78e64458ceea7e55238d575.jpeg">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/64b58781bab4c41d118ccf28f64ff257.jpeg">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/f095d127d929253d06dd5bcbfd2def0d.jpeg">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/cecd08644b5720daaa81da91788a6ca6.jpeg">
+<meta property="og:image" content="http://hexo.jimmylv.info/resources/6adc4f9722a930b4ee78ad22270677fb.jpeg">
+<meta property="og:updated_time" content="2012-11-16T12:05:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信朋友圈背后的设计">
+<meta name="twitter:description" content="微信朋友圈背后的设计[核心提示] 继摇一摇，身边的人之后，朋友圈是微信中非常重要的一个社交功能，它对于微信这个产品的意义如何呢？
+2011 年初，腾讯正式发布语音社交应用微信，随后通过快速迭代迅速占领市场，而在不久前结束的 2012 中国互联网大会上，马化腾在演讲中提到，微信用了 14 个月注册用户就超过了1亿。而从 2011 年 1 月微信发布到 2012 年9月突破2亿，也只不过用了 20 个">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> 微信朋友圈背后的设计 | 吕立青的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">吕立青的博客</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              微信朋友圈背后的设计
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-10-10T20:04:07+08:00" content="2015-10-10">
+            2015-10-10
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="微信朋友圈背后的设计">微信朋友圈背后的设计</h1><p><strong>[核心提示]</strong> 继摇一摇，身边的人之后，朋友圈是微信中非常重要的一个社交功能，它对于微信这个产品的意义如何呢？</p>
+<p>2011 年初，腾讯正式发布语音社交应用微信，随后通过快速迭代迅速占领市场，而在不久前结束的 2012 中国互联网大会上，马化腾在演讲中提到，微信用了 14 个月注册用户就超过了1亿。而从 2011 年 1 月微信发布到 2012 年9月突破2亿，也只不过用了 20 个月。平均每月1千万用户规模的增长速度，放到任何一个产品领域，都是一个不可复制的奇迹。你可以认为微信含着金钥匙出生，有 QQ 强大的注册用户做支撑，还有腾讯强大的渠道能力，但你不能否认的是，<a href="http://www.geekpark.net/read/view/160467" target="_blank" rel="external">微信的产品发展</a> ，经历了从抄袭到创新，再到让后来者望其项背，其成功无法否定。</p>
+<p><img src="/resources/da0276e6d3268bd2e159b5be0c835a41.jpeg" alt="image/jpeg"></p>
+<p>在手机聊天软件这场战争中微信无疑是胜利者，移动社交的巨大能量不言而喻，我们可以从很多方面找到微信成功的原因，本文仅从朋友圈这一个功能来分析他背后的设计。</p>
+<h2 id="照片-朋友圈的核心内容">照片-朋友圈的核心内容</h2><blockquote>
+<p>内容的核心为什么是照片？而非状态、微博、博客、网页分享等？</p>
+</blockquote>
+<p>从照片被发明出来后，我们的生活中就逐渐出现了一件很有意思的事情，人们喜欢把自己的照片分享给朋友。在智能手机普及前，我们也只能面对面的分享，从纸质照片到数码照片，在当时看一个人的手机最有意思的事情就是去翻看他的照片，可以说针对照片的社交早已存在于我们的生活当中。微信把这个场景复制到了手机中，他虽然不是第一家，但他的设计思路是非常清晰的。在移动社交中，我们没有必要去费劲的更新状态、说点什么话或者写个博客什么的，这也是件很傻的事情。而用手机分享照片，配一点文字说明，是很简单的事情，其中却又充满了无穷乐趣，随着信息膨胀，读图已经成为了这个时代的主旋律。</p>
+<p><img src="/resources/50b0e99bd78e64458ceea7e55238d575.jpeg" alt="image/jpeg"></p>
+<p>照片和地理位置一样是手机的固有属性，每个人的手机中都会有大量照片。朋友圈是微信 4.0 版本的主打功能，这个功能是微信在熟人互动的延伸。而朋友圈中分享的主要内容是个人相册。最开始看到朋友圈这三个字中会觉得他是腾讯社区的延伸，如果仅是这样，那么这个功能也就没有什么意思和想象空间了，但当微信聚焦到照片时，朋友圈就有了巨大的能量。照片的上传和分享是手机上关于移动社交的最简单的操作，只要能让用户把他的照片从照片库拿到你的应用中，可以说你就成功了一半。大篇幅的文字无论从书写还是阅读来说都是不适合手机的，仅仅围绕照片本身展开的移动社交才是有巨大能量的，而朋友圈的使用量也恰好说明了这点。</p>
+<h2 id="为什么是朋友圈">为什么是朋友圈</h2><blockquote>
+<p>4.0版本作为一个大更新版本，为什么要在这个版本中加入朋友圈功能呢？</p>
+</blockquote>
+<p>在这场战争的初期微信通过“附近的人”功能打败了米聊等同类产品，用户开始大规模转移到微信平台，熟人间的粘滞性也保证了微信本身的用户基本粘度，随后又更新了“摇一摇”、“漂流瓶”，但仅凭这些，微信很难把这个优势保持住，因为在这个时候用户更换软件的成本依然是很低的，如果米聊或者 KIK 也有同样的功能，而又推出了更好的功能，那么用户就会像当时从离开米聊来到微信一样离开微信。</p>
+<p><img src="/resources/64b58781bab4c41d118ccf28f64ff257.jpeg" alt="image/jpeg"></p>
+<p><img src="/resources/f095d127d929253d06dd5bcbfd2def0d.jpeg" alt="image/jpeg"></p>
+<p>朋友圈在这个时候出现了，随着用户对朋友圈的使用会产生大量的内容，包括用户自己更新的，在别人相册留下的。这些内容会提高用户的更换成本，随着内容和联系人越来越多，这个雪球越滚越大，结果就会像我们现在想更换QQ号一样难以实现。朋友圈不是一个很被关注的功能，但这个功能却巩固了微信的霸主地位。</p>
+<h2 id="用户为什么愿意上传照片">用户为什么愿意上传照片</h2><blockquote>
+<p>手机应用千千万万，怎么才能让用户把照片上传到你的应用里？</p>
+</blockquote>
+<p>我们在刚开始需要加一个人为好友时，会看他的基本资料，而如果他有照片的话，也一定回去看他的照片。我们可以发现，我们会经常去查看某人的个人相册，这是种动力，起源于害怕孤独、好奇心、分享快乐等等。也就是说用户是喜欢去看别人的相册的，有看的需求，就需要内容的生产，如何让用户上传自己的照片就是一个非常重要的问题。</p>
+<p><img src="/resources/cecd08644b5720daaa81da91788a6ca6.jpeg" alt="image/jpeg"></p>
+<p>前文说过用户是有分享照片的习惯的，这种习惯从纸质照片时代一直延续至今。朋友圈刚好就是这么一个舞台，他提供给了用户一个展示和分享自己生活的地方。虽然他仅仅是一个二级功能，但却很轻易的撬动了人们的这个习惯。因为有朋友圈，我们想分享，所以我们更新自己的个人相册，朋友们就会来看我们的相册，而相册又让在“详细资料”四个字后面我们更加的活灵活现了起来，也会有更多的朋友愿意来交流，一个完美的闭环就形成了。</p>
+<p>当然，不得不说个人相册主页那一个大大的相机图标也起到了很大的作用。</p>
+<p><img src="/resources/6adc4f9722a930b4ee78ad22270677fb.jpeg" alt="image/jpeg"></p>
+<h2 id="“圈子”的价值">“圈子”的价值</h2><blockquote>
+<p>朋友圈，为什么要叫这个名字？这个“圈”字是怎么表现出来的呢？</p>
+</blockquote>
+<p>谷歌最开始推出 Google+ 的时候有一个功能很亮，圈子功能，这个功能的特点是，你可以为自己的朋友分圈子，如家庭圈子，工作圈子，朋友圈子。你自己的每个更新都可以决定在哪个圈子发布，这样就只有你发布圈子中的朋友能看见，而且他人则是看不见的。这是一个很有需求的功能，但 Google+ 却没有做好，因为这个功能很麻烦，作为用户必须思考哪个人是哪个圈子的，而且如果某天他可能不适合再这个圈子了，我还得把他拿出来。所以这个功能只是看起来很美而已。</p>
+<p>我们再返回来说微信的朋友圈，我认为微信在这里借鉴了 Google+ 的圈子功能，但做了改进，Google+是在人们分享前区分圈子，而朋友圈则是在分享完后区分圈子。首先默认下，你发布的照片你的所有朋友都是能看见的，甚至陌生人也能看到。你可以单独操作某个人不让他看见，或者批量不让某几个人看到（设置、隐私中操作），就是把某几个人踢出你的朋友圈。这里是“圈”的一个表现。另外你的朋友可以评论或者赞你的照片，但是只你和评论你照片的朋友共同的好友能看到他的评论，也就是说你去看朋友的照片，你绝对不会看到一个你不认识的人的评论，你只会看到熟人的评论，并且和他们玩接楼游戏，这完全是符合熟人社区的设计的，也就是圈子的概念。</p>
+<h2 id="朋友圈的未来">朋友圈的未来</h2><blockquote>
+<p>未来永远是最美好的</p>
+</blockquote>
+<p>随着微信 4.3 引入了公众帐号平台、摇一摇传网页，微信已经开始从一个沟通工具慢慢的转化为一个移动平台。朋友圈也有了新的功能，分享网页。微信再增加他的媒体属性，看一个产品的演变总是一件很有意思的事情，也许微信也会开放把某个帐号分享到朋友圈的功能，也许某天朋友圈会成为一个单独的应用，谁也不知道，但这正式互联网的美妙之处。</p>
+<p>除非特别声明，极客观察均为极客公园原创报道，转载请注明原文链接。<br>原文地址：<a href="http://www.geekpark.net/read/view/166374" target="_blank" rel="external">http://www.geekpark.net/read/view/166374</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tengxun/" rel="tag">#tengxun</a>
+          
+            <a href="/tags/产品/" rel="tag">#产品</a>
+          
+            <a href="/tags/设计/" rel="tag">#设计</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015-10-10-微信的边界/" rel="prev">微信的边界</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015-10-10-微信导游会给旅游业带来什么？/" rel="next">微信导游会给旅游业带来什么？</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="JimmyLv" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">JimmyLv</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">224</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">86</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信朋友圈背后的设计"><span class="nav-number">1.</span> <span class="nav-text">微信朋友圈背后的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#照片-朋友圈的核心内容"><span class="nav-number">1.1.</span> <span class="nav-text">照片-朋友圈的核心内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么是朋友圈"><span class="nav-number">1.2.</span> <span class="nav-text">为什么是朋友圈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户为什么愿意上传照片"><span class="nav-number">1.3.</span> <span class="nav-text">用户为什么愿意上传照片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“圈子”的价值"><span class="nav-number">1.4.</span> <span class="nav-text">“圈子”的价值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朋友圈的未来"><span class="nav-number">1.5.</span> <span class="nav-text">朋友圈的未来</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JimmyLv</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
